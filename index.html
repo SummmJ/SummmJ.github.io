@@ -367,6 +367,36 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/03/16/async%E5%92%8Cawait%E5%AE%9E%E4%BE%8B/" >
+            
+                <span>async和await实例</span>
+        </a>
+        <div class="abstract-content">
+            使用async/await调用接口实现用户管理的增，删，改功能(vue)
+
+async/await  是ES7引入的新语法，可更加方便进行异步操作
+
+async关键字用于函数上( async的返回值是Promise的实例对象) 
+
+await关键字用于async的函数当中，用于处理异步的任务
+12345678async function Test(id)&#123;  const res = await  axios.get('/data');  return res&#125;//返回值是一个Promise对象，调用使用thenTest.then(res =&gt; &#123;con...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/16</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/03/14/vue-router%E5%AF%BC%E8%88%AA%E5%AE%88%E5%8D%AB/" >
             
                 <span>vue-router导航守卫</span>
@@ -640,9 +670,20 @@ to:将要访问的路径from:代表从哪个路径跳转而来next:是一个放�
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 2
+        Total : 3
         </div>
         <!-- search  -->
         
@@ -655,6 +696,11 @@ to:将要访问的路径from:代表从哪个路径跳转而来next:是一个放�
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/16</span><a class="archive-post-title" href= "/2020/03/16/async%E5%92%8Cawait%E5%AE%9E%E4%BE%8B/" >async和await实例</a>
+        </li>
     
     
         <li class="archive-post-item">
