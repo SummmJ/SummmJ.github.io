@@ -20,21 +20,21 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="常见的几种状态码2XX: 成功此系列的代码表示操作成功 200: 一般来说，这是客户端希望看到的响应代码。它表示服务器成功执行了客户端所请求的动作，并且在2XX系列里没有其他更适合的响应代码了。对于GET请求，服务器应返回客户端所请求资源的一个表示。对于其他请求，服务器应返回当前所选资源的一个表示，或者刚刚执行的动作的一个描述。 204: 若服务器拒绝对PUT、POST或者DELETE请求返回任何">
+    <meta name="description" content="#深入理解js的闭包 ###闭包：闭包（closure）是 JavaScript 语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。概念：函数和对其周围状态（词法环境）的引用捆绑在一起构成闭包（closure）。也就是说，闭包可以让你从内部函数访问外部函数作用域。在 JavaScript 中，每当函数被创建，就会在函数生成时生成闭包。 理解闭包，首先必须理解变量作用域。JavaScrip">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[计算机网络]--常见的几种状态码">
-<meta property="og:url" content="http://yoursite.com/2020/03/20/[%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C]--%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%A0%E7%A7%8D%E7%8A%B6%E6%80%81%E7%A0%81/index.html">
+<meta property="og:title" content="[JS]--闭包的详解">
+<meta property="og:url" content="http://yoursite.com/2020/03/22/[JS]--%E9%97%AD%E5%8C%85%E7%9A%84%E8%AF%A6%E8%A7%A3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="常见的几种状态码2XX: 成功此系列的代码表示操作成功 200: 一般来说，这是客户端希望看到的响应代码。它表示服务器成功执行了客户端所请求的动作，并且在2XX系列里没有其他更适合的响应代码了。对于GET请求，服务器应返回客户端所请求资源的一个表示。对于其他请求，服务器应返回当前所选资源的一个表示，或者刚刚执行的动作的一个描述。 204: 若服务器拒绝对PUT、POST或者DELETE请求返回任何">
+<meta property="og:description" content="#深入理解js的闭包 ###闭包：闭包（closure）是 JavaScript 语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。概念：函数和对其周围状态（词法环境）的引用捆绑在一起构成闭包（closure）。也就是说，闭包可以让你从内部函数访问外部函数作用域。在 JavaScript 中，每当函数被创建，就会在函数生成时生成闭包。 理解闭包，首先必须理解变量作用域。JavaScrip">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-20T12:36:29.368Z">
-<meta property="article:modified_time" content="2020-03-20T12:36:29.316Z">
+<meta property="article:published_time" content="2020-03-22T04:05:48.747Z">
+<meta property="article:modified_time" content="2020-03-22T04:05:48.654Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>[计算机网络]--常见的几种状态码 · SummmJ&#39;s Studio</title>
+    <title>[JS]--闭包的详解 · SummmJ&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -229,7 +229,7 @@
                 <a href="/" >SummmJ</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">[计算机网络]--常见的几种状态码</a>
+                <a href="#" class="post-name">[JS]--闭包的详解</a>
             </div>
     </div>
     
@@ -259,7 +259,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            [计算机网络]--常见的几种状态码
+            [JS]--闭包的详解
             <!-- 404 -->
             
         </h1>
@@ -278,12 +278,12 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">911</span>Reading time: <span class="post-count reading-time">3 min</span></span>
+                        <span>Word count: <span class="post-count word-count">1.7k</span>Reading time: <span class="post-count reading-time">7 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/03/20</span>
+                    <span class="post-intro-time">2020/03/22</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -407,29 +407,45 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="常见的几种状态码"><a href="#常见的几种状态码" class="headerlink" title="常见的几种状态码"></a>常见的几种状态码</h1><h2 id="2XX-成功"><a href="#2XX-成功" class="headerlink" title="2XX: 成功"></a>2XX: 成功</h2><p>此系列的代码表示操作成功</p>
-<p><strong>200</strong>: 一般来说，这是客户端希望看到的响应代码。它表示服务器成功执行了客户端所请求的动作，并且在2XX系列里没有其他更适合的响应代码了。对于GET请求，服务器应返回客户端所请求资源的一个表示。对于其他请求，服务器应返回当前所选资源的一个表示，或者刚刚执行的动作的一个描述。</p>
-<p><strong>204</strong>: 若服务器拒绝对PUT、POST或者DELETE请求返回任何状态信息或表示，那么通常采用此响应代码。204常常用在Ajax应用里。服务器通过这个响应代码告诉客户端：客户端的输入已被接受，但客户端不应该改变任何UI元素。</p>
-<h2 id="3XX-重定向"><a href="#3XX-重定向" class="headerlink" title="3XX:重定向"></a>3XX:重定向</h2><p>3XX系列响应代码表明：客户端需要做些额外工作才能得到所需要的资源。它们通常用于GET请求。他们通常告诉客户端需要向另一个URI发送GET请求，才能得到所需的表示。</p>
-<p><strong>301</strong>： 请求的网页已经<strong>永久</strong>移动到新位置，URL改变就要有301重定向。服务器知道客户端试图访问的是哪个资源，但它不喜欢客户端用当前URI来请求该资源。它希望客户端记住另一个URI，并在今后的请求中使用那个新的URI。你可以通过这个响应代码来防止由于URI变更而导致老URI失效。</p>
-<p><strong>302</strong>：请求的网页<strong>临时</strong>移动到新位置，搜索引擎的索引保存原来的URL。实体主体：一个包含指向新URI的链接的超文本文档（就像301一样）</p>
-<p><strong>304</strong>：如果请求者自上次请求后没有更新，304代码会告诉搜索引擎</p>
-<h2 id="4XX：客户端错误"><a href="#4XX：客户端错误" class="headerlink" title="4XX：客户端错误"></a>4XX：客户端错误</h2><p><strong>400</strong>： 表示请求无效。产生原因：前端提交数据的字段名称和字段类型与后台的实体没有保持一致。前端交付到后台的数据应该是json类型，但是前端没有JSON。stringify实现序列化。</p>
-<p><strong>401</strong>：当前的请求需要用户验证。客户端试图对一个受保护的资源进行操作，却又没有提供正确的认证证书。客户端提供了错误的证书，或者根本没有提供证书。</p>
-<p><strong>403</strong>：服务器已经得到请求，但是拒绝执行。</p>
-<p><strong>404</strong>：404表明服务器无法把客户端请求的URI转换为一个资源。</p>
-<h2 id="5XX-服务器端错误"><a href="#5XX-服务器端错误" class="headerlink" title="5XX: 服务器端错误"></a>5XX: 服务器端错误</h2><p>这些响应代码表明服务器端出现错误。一般来说，这些代码意味着服务器处于不能执行客户端请求的状态，此时客户端应稍后重试。有时，服务器能够估计客户端应在多久之后重试。</p>
-<p><strong>500</strong>：这是一个通用的服务器错误响应。对于大多数web框架，如果在执行请求处理代码时遇到了异常，它们就发送此响应代码</p>
-<p><strong>503</strong>：此响应代码表明HTTP服务器正常，只是下层web服务服务不能正常工作。最可能的原因是资源不足：服务器突然收到太多请求，以至于无法全部处理。由于此问题多半由客户端反复发送请求造成，因此HTTP服务器可以选择拒绝接受客户端请求而不是接受它，并发送503响应代码。</p>
+        <p>#深入理解js的闭包</p>
+<p>###闭包：<br>闭包（closure）是 JavaScript 语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。<br><strong>概念：</strong>函数和对其周围状态（词法环境）的引用捆绑在一起构成闭包（closure）。也就是说，闭包可以让你从内部函数访问外部函数作用域。在 JavaScript 中，每当函数被创建，就会在函数生成时生成闭包。</p>
+<p>理解闭包，首先必须理解变量作用域。JavaScript 有两种作用域：全局作用域和函数作用域。函数内部可以直接读取全局变量。</p>
+<p>如果出于种种原因，需要得到函数内的局部变量。正常情况下，这是办不到的，只有通过变通方法才能实现。那就是在函数的内部，再定义一个函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> n = <span class="number">999</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">　　<span class="built_in">console</span>.log(n); <span class="comment">// 999</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，函数f2就在函数f1内部，这时f1内部的所有局部变量，对f2都是可见的。但是反过来就不行，f2内部的局部变量，对f1就是不可见的。父对象的所有变量，对子对象都是可见的，反之则不成立。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function f1() &#123;</span><br><span class="line">  var n &#x3D; 999;</span><br><span class="line">  function f2() &#123;</span><br><span class="line">    console.log(n);</span><br><span class="line">  &#125;</span><br><span class="line">  return f2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var result &#x3D; f1();</span><br><span class="line">result(); &#x2F;&#x2F; 999</span><br></pre></td></tr></table></figure>
+<p>函数f1的返回值就是函数f2，由于f2可以读取f1的内部变量，所以就可以在外部获得f1的内部变量了。<strong>闭包就是函数f2</strong>，即能够读取其他函数内部变量的函数</p>
+<p>闭包的最大用处有两个，一个是可以<strong>读取函数内部的变量</strong>，另一个就是<strong>让这些变量始终保持在内存中</strong>，即闭包可以使得它诞生环境一直存在。请看下面的例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function createIncrementor(start) &#123;</span><br><span class="line">  return function () &#123;</span><br><span class="line">    return start++;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">var inc &#x3D; createIncrementor(5);</span><br><span class="line">inc() &#x2F;&#x2F; 5</span><br><span class="line">inc() &#x2F;&#x2F; 6</span><br><span class="line">inc() &#x2F;&#x2F; 7</span><br></pre></td></tr></table></figure>
+<p>start是函数createIncrementor的内部变量。通过闭包，start的状态被保留了，每一次调用都是在上一次调用的基础上进行计算。从中可以看到，闭包inc使得函数createIncrementor的内部环境，一直存在。所以，闭包可以看作是函数内部作用域的一个接口。inc始终在内存中，而inc的存在依赖于createIncrementor，因此也始终在内存中，不会在调用结束后，被垃圾回收机制回收。</p>
+<p>闭包的另一个用处，是<strong>封装对象的私有属性和私有方法</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var Counter &#x3D; (function() &#123;</span><br><span class="line">  var privateCounter &#x3D; 0;</span><br><span class="line">  function changeBy(val) &#123;</span><br><span class="line">    privateCounter +&#x3D; val;</span><br><span class="line">  &#125;</span><br><span class="line">  return &#123;</span><br><span class="line">    increment: function() &#123;</span><br><span class="line">      changeBy(1);</span><br><span class="line">    &#125;,</span><br><span class="line">    decrement: function() &#123;</span><br><span class="line">      changeBy(-1);</span><br><span class="line">    &#125;,</span><br><span class="line">    value: function() &#123;</span><br><span class="line">      return privateCounter;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;   </span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line">console.log(Counter.value()); &#x2F;* logs 0 *&#x2F;</span><br><span class="line">Counter.increment();</span><br><span class="line">Counter.increment();</span><br><span class="line">console.log(Counter.value()); &#x2F;* logs 2 *&#x2F;</span><br><span class="line">Counter.decrement();</span><br><span class="line">console.log(Counter.value()); &#x2F;* logs 1 *&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>上面的示例展现了如何使用闭包来定义公共函数，并令其可以访问私有函数和变量。这个方式也称为 模块模式（module pattern）</p>
+<p>注意，外层函数每次运行，都会生成一个新的闭包，而这个闭包又会保留外层函数的内部变量，所以内存消耗很大。因此不能滥用闭包，否则会造成网页的性能问题。</p>
+<p>###在循环中创建闭包：一个常见错误</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id&#x3D;&quot;help&quot;&gt;Helpful notes will appear here&lt;&#x2F;p&gt;</span><br><span class="line">&lt;p&gt;E-mail: &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;email&quot; name&#x3D;&quot;email&quot;&gt;&lt;&#x2F;p&gt;</span><br><span class="line">&lt;p&gt;Name: &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;name&quot; name&#x3D;&quot;name&quot;&gt;&lt;&#x2F;p&gt;</span><br><span class="line">&lt;p&gt;Age: &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;age&quot; name&#x3D;&quot;age&quot;&gt;&lt;&#x2F;p&gt;</span><br><span class="line">function showHelp(help) &#123;</span><br><span class="line">  document.getElementById(&#39;help&#39;).innerHTML &#x3D; help;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function setupHelp() &#123;</span><br><span class="line">  var helpText &#x3D; [</span><br><span class="line">      &#123;&#39;id&#39;: &#39;email&#39;, &#39;help&#39;: &#39;Your e-mail address&#39;&#125;,</span><br><span class="line">      &#123;&#39;id&#39;: &#39;name&#39;, &#39;help&#39;: &#39;Your full name&#39;&#125;,</span><br><span class="line">      &#123;&#39;id&#39;: &#39;age&#39;, &#39;help&#39;: &#39;Your age (you must be over 16)&#39;&#125;</span><br><span class="line">    ];</span><br><span class="line"></span><br><span class="line">  for (var i &#x3D; 0; i &lt; helpText.length; i++) &#123;</span><br><span class="line">    var item &#x3D; helpText[i];</span><br><span class="line">    document.getElementById(item.id).onfocus &#x3D; function() &#123;</span><br><span class="line">      showHelp(item.help);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">setupHelp();</span><br></pre></td></tr></table></figure>
+
+<p>运行这段代码后，您会发现它没有达到想要的效果。无论焦点在哪个input上，显示的都是关于年龄的信息。</p>
+<p>原因是赋值给 onfocus 的是闭包。这些闭包是由他们的函数定义和在 setupHelp 作用域中捕获的环境所组成的。这三个闭包在循环中被创建，但他们共享了同一个词法作用域，在这个作用域中存在一个变量item。这是因为变量help使用var进行声明，由于变量提升，所以具有函数作用域。当onfocus的回调执行时，item.help的值被决定。由于循环在事件触发之前早已执行完毕，变量对象item（被三个闭包所共享）已经指向了helpText的最后一项。</p>
+<p>解决这个问题的一种方案是使用更多的闭包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">function showHelp(help) &#123;</span><br><span class="line">  document.getElementById(&#39;help&#39;).innerHTML &#x3D; help;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function makeHelpCallback(help) &#123;</span><br><span class="line">  return function() &#123;</span><br><span class="line">    showHelp(help);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function setupHelp() &#123;</span><br><span class="line">  var helpText &#x3D; [</span><br><span class="line">      &#123;&#39;id&#39;: &#39;email&#39;, &#39;help&#39;: &#39;Your e-mail address&#39;&#125;,</span><br><span class="line">      &#123;&#39;id&#39;: &#39;name&#39;, &#39;help&#39;: &#39;Your full name&#39;&#125;,</span><br><span class="line">      &#123;&#39;id&#39;: &#39;age&#39;, &#39;help&#39;: &#39;Your age (you must be over 16)&#39;&#125;</span><br><span class="line">    ];</span><br><span class="line"></span><br><span class="line">  for (var i &#x3D; 0; i &lt; helpText.length; i++) &#123;</span><br><span class="line">    var item &#x3D; helpText[i];</span><br><span class="line">    document.getElementById(item.id).onfocus &#x3D; makeHelpCallback(item.help);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">setupHelp();</span><br></pre></td></tr></table></figure>
+
+<p>另一种方法使用了匿名闭包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">function showHelp(help) &#123;</span><br><span class="line">  document.getElementById(&#39;help&#39;).innerHTML &#x3D; help;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function setupHelp() &#123;</span><br><span class="line">  var helpText &#x3D; [</span><br><span class="line">      &#123;&#39;id&#39;: &#39;email&#39;, &#39;help&#39;: &#39;Your e-mail address&#39;&#125;,</span><br><span class="line">      &#123;&#39;id&#39;: &#39;name&#39;, &#39;help&#39;: &#39;Your full name&#39;&#125;,</span><br><span class="line">      &#123;&#39;id&#39;: &#39;age&#39;, &#39;help&#39;: &#39;Your age (you must be over 16)&#39;&#125;</span><br><span class="line">    ];</span><br><span class="line"></span><br><span class="line">  for (var i &#x3D; 0; i &lt; helpText.length; i++) &#123;</span><br><span class="line">    (function() &#123;</span><br><span class="line">       var item &#x3D; helpText[i];</span><br><span class="line">       document.getElementById(item.id).onfocus &#x3D; function() &#123;</span><br><span class="line">         showHelp(item.help);</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;)(); &#x2F;&#x2F; 马上把当前循环项的item与事件回调相关联起来</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">setupHelp();</span><br></pre></td></tr></table></figure>
+
+<p>避免使用过多的闭包，可以用let关键词：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">function showHelp(help) &#123;</span><br><span class="line">  document.getElementById(&#39;help&#39;).innerHTML &#x3D; help;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function setupHelp() &#123;</span><br><span class="line">  var helpText &#x3D; [</span><br><span class="line">      &#123;&#39;id&#39;: &#39;email&#39;, &#39;help&#39;: &#39;Your e-mail address&#39;&#125;,</span><br><span class="line">      &#123;&#39;id&#39;: &#39;name&#39;, &#39;help&#39;: &#39;Your full name&#39;&#125;,</span><br><span class="line">      &#123;&#39;id&#39;: &#39;age&#39;, &#39;help&#39;: &#39;Your age (you must be over 16)&#39;&#125;</span><br><span class="line">    ];</span><br><span class="line"></span><br><span class="line">  for (var i &#x3D; 0; i &lt; helpText.length; i++) &#123;</span><br><span class="line">    let item &#x3D; helpText[i];</span><br><span class="line">    document.getElementById(item.id).onfocus &#x3D; function() &#123;</span><br><span class="line">      showHelp(item.help);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">setupHelp();</span><br></pre></td></tr></table></figure>
+<p><strong>文章参考：MDN闭包的讲解，网道闭包的讲解</strong></p>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>Author：<a href="http://yoursite.com">John Doe</a>
-            <p>原文链接：<a href="http://yoursite.com/2020/03/20/[%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C]--%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%A0%E7%A7%8D%E7%8A%B6%E6%80%81%E7%A0%81/">http://yoursite.com/2020/03/20/[%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C]--%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%A0%E7%A7%8D%E7%8A%B6%E6%80%81%E7%A0%81/</a>
-            <p>发表日期：<a href="http://yoursite.com/2020/03/20/[%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C]--%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%A0%E7%A7%8D%E7%8A%B6%E6%80%81%E7%A0%81/">March 20th 2020, 8:36:29 pm</a>
-            <p>更新日期：<a href="http://yoursite.com/2020/03/20/[%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C]--%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%A0%E7%A7%8D%E7%8A%B6%E6%80%81%E7%A0%81/">March 20th 2020, 8:36:29 pm</a>
+            <p>原文链接：<a href="http://yoursite.com/2020/03/22/[JS]--%E9%97%AD%E5%8C%85%E7%9A%84%E8%AF%A6%E8%A7%A3/">http://yoursite.com/2020/03/22/[JS]--%E9%97%AD%E5%8C%85%E7%9A%84%E8%AF%A6%E8%A7%A3/</a>
+            <p>发表日期：<a href="http://yoursite.com/2020/03/22/[JS]--%E9%97%AD%E5%8C%85%E7%9A%84%E8%AF%A6%E8%A7%A3/">March 22nd 2020, 12:05:48 pm</a>
+            <p>更新日期：<a href="http://yoursite.com/2020/03/22/[JS]--%E9%97%AD%E5%8C%85%E7%9A%84%E8%AF%A6%E8%A7%A3/">March 22nd 2020, 12:05:48 pm</a>
             <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -437,17 +453,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/03/21/%5Bcss%5D--position%E5%AE%9A%E4%BD%8D/" title= "[css]--position定位">
-                    <div class="nextTitle">[css]--position定位</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/03/19/%5B%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%5D--TCP%E5%92%8CUDP%E5%8D%8F%E8%AE%AE/" title= "[计算机网络]--TCP和UDP协议">
-                    <div class="prevTitle">[计算机网络]--TCP和UDP协议</div>
+                <a href= "/2020/03/21/%5Bcss%5D--position%E5%AE%9A%E4%BD%8D/" title= "[css]--position定位">
+                    <div class="prevTitle">[css]--position定位</div>
                 </a>
             
         </li>
@@ -577,7 +588,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#常见的几种状态码"><span class="toc-number">1.</span> <span class="toc-text">常见的几种状态码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2XX-成功"><span class="toc-number">1.1.</span> <span class="toc-text">2XX: 成功</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3XX-重定向"><span class="toc-number">1.2.</span> <span class="toc-text">3XX:重定向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4XX：客户端错误"><span class="toc-number">1.3.</span> <span class="toc-text">4XX：客户端错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5XX-服务器端错误"><span class="toc-number">1.4.</span> <span class="toc-text">5XX: 服务器端错误</span></a></li></ol></li></ol>
+        
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
