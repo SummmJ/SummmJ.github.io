@@ -20,27 +20,17 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="计算机网络—TCP&#x2F;UDP协议物理层：物理层建立在物理通信介质的基础上，作为系统和通信介质的接口，用来实现数据链路实体间透明的比特 (bit) 流传输。只有该层为真实物理通信，其它各层为虚拟通信数据链路层 : 在物理层提供比特流服务的基础上，建立相邻结点之间的数据链路，通过差错控制提供数据帧在信道上无差错的传输，并进行各电路上的动作系列。数据的单位称为帧网络层：选择合适的路由，使数据分组可以交付到">
-<meta property="og:type" content="article">
-<meta property="og:title" content="[计算机网络]--TCP和UDP协议">
-<meta property="og:url" content="http://yoursite.com/2020/03/19/[%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C]--TCP%E5%92%8CUDP%E5%8D%8F%E8%AE%AE/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/archives/2020/page/2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="计算机网络—TCP&#x2F;UDP协议物理层：物理层建立在物理通信介质的基础上，作为系统和通信介质的接口，用来实现数据链路实体间透明的比特 (bit) 流传输。只有该层为真实物理通信，其它各层为虚拟通信数据链路层 : 在物理层提供比特流服务的基础上，建立相邻结点之间的数据链路，通过差错控制提供数据帧在信道上无差错的传输，并进行各电路上的动作系列。数据的单位称为帧网络层：选择合适的路由，使数据分组可以交付到">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/94444/28/16029/26768/5e75fcf2E609051e9/16cd76fbbe348943.png">
-<meta property="og:image" content="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/87653/2/16049/56939/5e75fcf2Ecd5b1c90/f7ecd9450da2660b.png">
-<meta property="og:image" content="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/101441/35/15879/73630/5e75fcf2E81379511/84e083e46a0e12cd.png">
-<meta property="og:image" content="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/93376/28/15987/102145/5e75fcf2Efc95e774/fd095f42c6a3e2c7.png">
-<meta property="og:image" content="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/92049/33/15766/131059/5e75fcf2E5bcaf157/d49caf18346442af.png">
-<meta property="article:published_time" content="2020-03-19T14:03:50.129Z">
-<meta property="article:modified_time" content="2020-03-21T11:43:51.349Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/94444/28/16029/26768/5e75fcf2E609051e9/16cd76fbbe348943.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>[计算机网络]--TCP和UDP协议 · SummmJ&#39;s Studio</title>
+    <title>SummmJ&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -221,23 +211,12 @@
 <meta name="generator" content="Hexo 4.2.0"></head>
 
     
-        <body class="post-body">
-    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/" >SummmJ</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">[计算机网络]--TCP和UDP协议</a>
-            </div>
-    </div>
     
     <a class="home-link" href=/>SummmJ</a>
 </header>
@@ -249,68 +228,24 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/qwe.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
-            
-            [计算机网络]--TCP和UDP协议
-            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <div class="post-intros">
-                <!-- 文章页标签  -->
-                
-                
-                    <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">1.9k</span>Reading time: <span class="post-count reading-time">6 min</span></span>
-                    </div>
-                
-                <div class="post-intro-meta">
-                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/03/19</span>
-                    
-                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                        <span class="iconfont-archer">&#xe602;</span>
-                        <span id="busuanzi_value_page_pv"></span>
-                    </span>
-                    
-                    <span class="shareWrapper">
-                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
-                        <span class="shareText">Share</span>
-                        <ul class="shareList">
-                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
-                                <div class="share-qrcode"></div>
-                            </li>
-                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
-                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
-                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
-                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
-                        </ul>
-                    </span>
-                </div>
-            </div>
         
     </div>
 </div>
@@ -411,107 +346,40 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <h1 id="计算机网络—TCP-UDP协议"><a href="#计算机网络—TCP-UDP协议" class="headerlink" title="计算机网络—TCP/UDP协议"></a>计算机网络—TCP/UDP协议</h1><p><strong>物理层</strong>：物理层建立在物理通信介质的基础上，作为系统和通信介质的接口，用来实现数据链路实体间透明的比特 (bit) 流传输。只有该层为真实物理通信，其它各层为虚拟通信<br><strong>数据链路层</strong> : 在物理层提供比特流服务的基础上，建立相邻结点之间的数据链路，通过差错控制提供数据帧在信道上无差错的传输，并进行各电路上的动作系列。数据的单位称为帧<br><strong>网络层</strong>：选择合适的路由，使数据分组可以交付到目的主机<br><strong>传输层</strong>：负责主机中进程间的通信<br><strong>应用层</strong>：直接为用户的应用程序提供服务</p>
-<p>##传输层</p>
-<p>传输层是在进程间传输报文，同时<strong>TCP协议、UDP协议</strong>是TCP/IP中最具有代表性的传输层协议<br>###区别：</p>
-<ol>
-<li><p>TCP协议是<strong>面向连接</strong>的，是可靠的协议<br>UDP协议是<strong>面向无连接</strong>的，只确保发送消息，其他处理都由上层应用来完成<br>面向连接是指面向连接的协议会先建立连接。<br>所谓的<strong>建立连接</strong>，是为了在客户端和服务端维护连接，而建立一定的数据结构来维护双方交互的状态，用这样的数据结构来保证所谓的面向连接的特性。</p>
-</li>
-<li><p>TCP 提供<strong>可靠交付</strong>。通过 TCP 连接传输的数据，无差错、不丢失、不重复、并且按序到达。<br> 而 UDP 继承了 IP 包的特性，<strong>不保证不丢失，不保证按顺序到达。</strong></p>
-</li>
-<li><p>TCP 是<strong>面向字节流</strong>的。发送的时候发的是一个流，没头没尾。<br> 而 UDP 继承了 IP 的特性，<strong>基于数据报</strong>的，一个一个地发，一个一个地收。</p>
-</li>
-<li><p>TCP 是可以有<strong>拥塞控制</strong>的。它意识到包丢弃了或者网络的环境不好了，就会根据情况调整自己的   行为，看看是不是发快了，要不要发慢点。UDP 就不会，应用让我发，我就发，<strong>不会去进行自我调整</strong></p>
-</li>
-<li><p>TCP 其实是一个<strong>有状态服务</strong>，通俗地讲就是有脑子的，里面精确地记着发送了没有，接收到没有，发送到哪个了，应该接收哪个了，错一点儿都不行。而 UDP 则是<strong>无状态服务</strong>。通俗地说是没脑子的。</p>
-</li>
-</ol>
-<p>###应用场景<br><strong>UDP应用场景</strong>：</p>
-<ol>
-<li>需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用</li>
-<li>不需要一对一沟通，建立连接，而是可以广播的应用</li>
-<li>需要处理速度快，时延低，可以容忍少数丢包,碰到阻塞也继续向前。</li>
-</ol>
-<p><strong>例如</strong>：Q聊天、在线视频、网络语音电话（即时通讯，速度要求高，但是出现偶尔断续不是太大问题，并且此处完全不可以使用重发机制）、广播通信（广播、多播）。</p>
-<p><strong>TCP应用场景</strong>：<br>   效率要求相对低，但对准确性要求相对高的场景。因为传输中需要对数据确认、重发、排序等操作，相比之下效率没有UDP高。<br>       <strong>例如</strong>：文件传输（准确高要求高、但是速度可以相对慢）、接受邮件、远程登录。</p>
-<p><strong>UDP报头格式</strong>：<br><img src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/94444/28/16029/26768/5e75fcf2E609051e9/16cd76fbbe348943.png" alt="Alt"></p>
-<p><strong>UDP小结</strong>：</p>
-<ol>
-<li>如果将 TCP 比作成熟的社会人，UDP 则是头脑简单的小朋友。TCP 复杂，UDP 简单；TCP 维护连接，UDP 谁都相信；TCP 会坚持知进退；UDP 愣头青一个，勇往直前；</li>
-<li>UDP 虽然简单，但它有简单的用法。它可以用在环境简单、需要多播、应用层自己控制传输的地方。例如 DHCP、VXLAN、QUIC 等。</li>
-</ol>
-<p><strong>TCP报头格式</strong>：<br> <img src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/87653/2/16049/56939/5e75fcf2Ecd5b1c90/f7ecd9450da2660b.png" alt="Alt"></p>
-<p>###TCP连接的三次握手<br><img src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/101441/35/15879/73630/5e75fcf2E81379511/84e083e46a0e12cd.png" alt="Alt"></p>
-<ol>
-<li>TCP服务器进程先创建传输控制块TCB，时刻准备接受客户进程的连接请求，此时服务器就进入了LISTEN（监听）状态；</li>
-<li>TCP客户进程也是先创建传输控制块TCB，然后向服务器发出连接请求报文，这是报文首部中的同部位SYN=1，同时选择一个初始序列号 seq=x ，此时， TCP客户端进程进入了 SYN-SENT（同步已发送状态）状态。TCP规定，SYN报文段（SYN=1的报文段）不能携带数据，但需要消耗掉一个序号。</li>
-<li>TCP服务器收到请求报文后，如果同意连接，则发出确认报文。确认报文中应该 ACK=1，SYN=1，确认号是ack=x+1，同时也要为自己初始化一个序列号 seq=y，此时，TCP服务器进程进入了SYN-RCVD（同步收到）状态。这个报文也不能携带数据，但是同样要消耗一个序号。</li>
-<li>TCP客户进程收到确认后，还要向服务器给出确认。确认报文的ACK=1，ack=y+1，自己的序列号seq=x+1，此时，TCP连接建立，客户端进入ESTABLISHED（已建立连接）状态。TCP规定，ACK报文段可以携带数据，但是如果不携带数据则不消耗序号。</li>
-<li>当服务器收到客户端的确认后也进入ESTABLISHED状态，此后双方就可以开始通信了。</li>
-</ol>
-<p>###TCP 四次挥手<br><img src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/93376/28/15987/102145/5e75fcf2Efc95e774/fd095f42c6a3e2c7.png" alt="Alt"></p>
-<ol>
-<li>客户端进程发出连接释放报文，并且停止发送数据。此时，客户端进入FIN-WAIT-1（终止等待1）状态。 </li>
-<li>服务器收到连接释放报文，发出确认报文，此时，服务端就进入了CLOSE-WAIT（关闭等待）状态。TCP服务器通知高层的应用进程，客户端向服务器的方向就释放了，这时候处于半关闭状态，即客户端已经没有数据要发送了，但是服务器若发送数据，客户端依然要接受。这个状态还要持续一段时间，也就是整个CLOSE-WAIT状态持续的时间。</li>
-<li>客户端收到服务器的确认请求后，客户端就进入FIN-WAIT-2（终止等待2）状态，等待服务器发送连接释放报文（在这之前还需要接受服务器发送的最后的数据）。</li>
-<li>服务器将最后的数据发送完毕后，就向客户端发送连接释放报文，此时，服务器就进入了LAST-ACK（最后确认）状态，等待客户端的确认。</li>
-<li>客户端收到服务器的连接释放报文后，必须发出确认，此时，客户端就进入了TIME-WAIT（时间等待）状态。注意此时TCP连接还没有释放，必须经过2MSL（最长报文段寿命）的时间后，当客户端撤销相应的TCB后，才进入CLOSED状态。</li>
-</ol>
-<p><strong>MSL 是 Maximum Segment Lifetime</strong>，报文最大生存时间，它是任何报文在网络上存在的最长时间，超过这个时间报文将被丢弃。因为 TCP 报文基于是 IP 协议的，而 IP 头中有一个 TTL 域，是 IP 数据报可以经过的最大路由数，每经过一个处理他的路由器此值就减 1，当此值为 0 则数据报将被丢弃，同时发送 ICMP 报文通知源主机。协议规定 MSL 为 2 分钟，实际应用中常用的是 30 秒，1 分钟和 2 分钟等。</p>
-<p>###TCP状态机<br><img src="http://free-cn-01.cdn.bilnn.com/ddimg/jfs/t1/92049/33/15766/131059/5e75fcf2E5bcaf157/d49caf18346442af.png" alt="Alt"></p>
-<hr>
-<p>参考文献：极客时间趣谈网络协议（刘超）</p>
-
-    </article>
-    <!-- license  -->
+            <main class="main index-page">
     
-        <div class="license-wrapper">
-            <p>Author：<a href="http://yoursite.com">John Doe</a>
-            <p>原文链接：<a href="http://yoursite.com/2020/03/19/[%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C]--TCP%E5%92%8CUDP%E5%8D%8F%E8%AE%AE/">http://yoursite.com/2020/03/19/[%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C]--TCP%E5%92%8CUDP%E5%8D%8F%E8%AE%AE/</a>
-            <p>发表日期：<a href="http://yoursite.com/2020/03/19/[%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C]--TCP%E5%92%8CUDP%E5%8D%8F%E8%AE%AE/">March 19th 2020, 10:03:50 pm</a>
-            <p>更新日期：<a href="http://yoursite.com/2020/03/19/[%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C]--TCP%E5%92%8CUDP%E5%8D%8F%E8%AE%AE/">March 21st 2020, 7:43:51 pm</a>
-            <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/03/13/vue-shopcar/" >
+            
+                <span>vue-shopcar</span>
+        </a>
+        <div class="abstract-content">
+            基于vue的购物车结算功能
+基于vue的购物车结算功能一个简单的使用vue框架，mui的购物车结算列表。界面为手机端。
+
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108var cardtitle = &#12...
         </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/13</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
     
     <!-- paginator  -->
-    <ul class="post-paginator">
-        <li class="next">
-            
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/03/20/%5B%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%5D--%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%A0%E7%A7%8D%E7%8A%B6%E6%80%81%E7%A0%81/" title= "[计算机网络]--常见的几种状态码">
-                    <div class="nextTitle">[计算机网络]--常见的几种状态码</div>
-                </a>
-            
-        </li>
-        <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/03/16/async%E5%92%8Cawait%E5%AE%9E%E4%BE%8B/" title= "async和await实例">
-                    <div class="prevTitle">async和await实例</div>
-                </a>
-            
-        </li>
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-<!-- City版安装代码已完成 -->
     
+    <nav class="page-nav">
+        <a class="extend prev" rel="prev" href="/archives/2020/">&lt; PREV</a><a class="page-number" href="/archives/2020/">1</a><span class="page-number current">2</span>
+    </nav>
     
-    <!-- gitalk评论 -->
-
-    <!-- utteranc评论 -->
-
-    <!-- partial('_partial/comment/changyan') -->
-    <!--PC版-->
-
-
-    
-    
-
-    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -603,24 +471,6 @@ height:50vh;
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper" style=
-    
-
-
-
-
-
-
-
-top:50vh;
-
-    >
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#计算机网络—TCP-UDP协议"><span class="toc-number">1.</span> <span class="toc-text">计算机网络—TCP&#x2F;UDP协议</span></a></li></ol>
-    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -924,8 +774,6 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
-    
-        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
