@@ -359,7 +359,8 @@
                 <span>使用setTimeout和clearTimeout实现setInterval和clearInterval</span>
         </a>
         <div class="abstract-content">
-            
+            使用setTimeout和clearTimeout实现setInterval和clearIntervalsetInterval的实现：setInterval()函数会指定周期（ms计数）来调用函数或者计算表达式所以它本质需要不停的循环调用，所以可以运用到递归调用setTimeout()函数以下是它的最简易实现方法
+1234567var mySetInterval = function(fn,delay)&#123;            function interval()&#123;                setTimeout(interval,delay),//递归调用  ...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
